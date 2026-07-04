@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <title>ULTRON-JARVIS AI</title>
+  <meta name="description" content="ULTRON / J.A.R.V.I.S. AI — dual-persona AI chatbot." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── Boot Sequence ── -->
+<div id="boot">
+  <div class="boot-glow" id="boot-glow"></div>
+  <div class="boot-icon" id="boot-icon">
+    <svg id="boot-svg" width="112" height="112" viewBox="0 0 112 112" fill="none"></svg>
+    <div id="boot-core" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:fadeIn 0.4s 0.8s forwards;">
+      <div id="boot-core-dot" style="width:32px;height:32px;border-radius:50%;animation:corePulse 1.5s ease-in-out infinite;"></div>
+    </div>
+  </div>
+  <div class="boot-name" id="boot-name"></div>
+  <div class="boot-lines" id="boot-lines"></div>
+  <div class="boot-online" id="boot-online"></div>
+</div>
+
+<!-- ── Main App ── -->
+<div id="app" style="display:none;">
+  <canvas id="circuit-bg"></canvas>
+  <div id="radial-bg"></div>
+
+  <!-- Sidebar backdrop (mobile) -->
+  <div id="sidebar-backdrop"></div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">HISTORY</span>
+      <button id="sidebar-close" style="display:none;background:none;border:none;cursor:pointer;color:#4a4a5a;font-size:16px;">✕</button>
+    </div>
+    <div class="sidebar-body" id="sidebar-body"></div>
+  </div>
+
+  <!-- Main -->
+  <div id="main">
+    <!-- Header -->
+    <div id="header">
+      <button id="menu-btn">☰</button>
+      <div class="header-avatar" id="header-avatar"></div>
+      <div class="header-identity">
+        <div class="header-name" id="header-name"></div>
+        <div class="header-tagline" id="header-tagline"></div>
+      </div>
+      <div class="header-breadcrumb" id="header-breadcrumb" style="display:none;">
+        <span style="font-size:12px;color:var(--muted);">›</span>
+        <span class="header-breadcrumb-text" id="header-breadcrumb-text"></span>
+      </div>
+      <div class="header-right">
+        <button id="theme-toggle">
+          <span class="toggle-label" id="tl-ultron">ULTRON</span>
+          <span class="toggle-track" id="toggle-track">
+            <span class="toggle-thumb" id="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label" id="tl-jarvis">JARVIS</span>
+        </button>
+        <div class="online-indicator">
+          <div class="online-dot-wrap">
+            <div class="online-dot-ping" id="online-ping"></div>
+            <div class="online-dot" id="online-dot"></div>
+          </div>
+          <span class="online-label" id="online-label">ONLINE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div id="messages-wrap">
+      <div id="messages-inner"></div>
+    </div>
+
+    <!-- Input -->
+    <div id="input-wrap">
+      <div id="input-inner">
+        <div id="input-box">
+          <textarea id="chat-textarea" rows="1" placeholder="SPEAK. I AM LISTENING."></textarea>
+          <button id="send-btn" disabled>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
