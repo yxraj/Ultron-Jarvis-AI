@@ -4,7 +4,7 @@
    Dual Persona: Ultron / Jarvis
    ══════════════════════════════════════════════════════ */
 
-const GROQ_API_KEY = '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';
+const GROQ_API_KEY = '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';
 const GROQ_MODEL = 'llama-3.3-70b-versatile';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 
